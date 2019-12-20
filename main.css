@@ -254,8 +254,9 @@ section.main-wrapper {
 /* Panel Element */
 
 .panel {
-  border: 1px solid rgba(204, 204, 204, 0.18);
+  border: 1px solid rgba(204, 204, 204, 0.49);
   border-radius: .25rem;
+  margin-bottom: 1rem;
 }
 
 .panel-header {
@@ -264,7 +265,7 @@ section.main-wrapper {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: 1px solid rgba(204, 204, 204, 0.18);
+  border-bottom: 1px solid rgba(204, 204, 204, 0.49);
 }
 
 .btn {
@@ -292,4 +293,58 @@ section.main-wrapper {
   margin-right: .25rem;
 }
 
-/*  */
+/* Card Media */
+
+.card-media {
+  display: flex;
+  padding: .35rem .75rem;
+  font-size: .875rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.49);
+}
+
+.card-media-header {
+  flex: 1;
+  margin-right: .5rem;
+}
+
+.card-media-header > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-media-body {
+  flex: 2;
+}
+
+.card-media-body > p {
+  margin: .25rem 0;
+}
+
+.card-media-text {
+  display: flex;
+}
+
+.card-media-title {
+  font-weight: bolder;
+}
+
+.card-media-date {
+  margin-left: auto;
+}
+
+.calendar-event-date > span {
+  display: block;
+  color: #333333;
+}
+
+.calendar-event-date > span.number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.calendar-event-date > span.month {
+  text-align: center;
+  text-transform: uppercase;
+}
