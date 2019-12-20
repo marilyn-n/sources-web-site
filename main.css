@@ -201,20 +201,18 @@ section.search-sources {
 /* Page items */
 
 section.main-wrapper {
-  padding: 2rem 0;
+  padding: 2rem;
   display: flex;
 }
 
 /* Featured Pages Column */
 .column-1 {
  flex: 2;
- padding: 0 1.5rem;
 }
 
 /* Media and Calendar Events Column */
 .column-2 {
   flex: 1;
-  background-color: pink;
 }
 
 /* Card element */
@@ -239,6 +237,7 @@ section.main-wrapper {
 }
 
 .card.page > .card-body {
+  text-align: center;
   padding: .5rem;
 }
 
@@ -251,3 +250,46 @@ section.main-wrapper {
   font-weight: bolder;
   margin-bottom: .5rem;
 }
+
+/* Panel Element */
+
+.panel {
+  border: 1px solid rgba(204, 204, 204, 0.18);
+  border-radius: .25rem;
+}
+
+.panel-header {
+  padding: .25rem .75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.18);
+}
+
+.btn {
+  border: 1px solid #007bff;
+  color: white;
+  background-color:#007bff;
+  border-radius: .2rem;
+  text-align: center;
+  padding: .25rem .5rem;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: .875rem;
+  margin: .25rem 0;
+}
+
+.btn:hover {
+  background-color: #0068d9;
+  border-color: #0068d9;
+}
+
+.fa-pen, .fa-calendar-alt {
+  font-size: 1rem;
+  margin-right: .25rem;
+}
+
+/*  */
