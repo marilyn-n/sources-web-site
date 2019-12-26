@@ -13,6 +13,11 @@ body {
   padding: 0
 }
 
+* h4 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 /* Social nav */
 .nav.social-links {
   background-color: #b40000;
@@ -369,7 +374,7 @@ section.main-wrapper {
 }
 
 /* Get Sources Working for you */
-.sources-for-you {
+.sources-for-you, .indispensable-directory {
   padding: 2rem 4rem;
 }
 
@@ -377,11 +382,11 @@ section.main-wrapper {
   font-size: 2rem;
 }
 
-.sources-for-you-subtitle {
+.subtitle {
   font-size: 1.5rem;
 }
 
-.sources-for-you > h4,  .sources-for-you > span {
+h4, .subtitle {
   text-align: center;
   display: block;
   margin: 1rem 0;
@@ -408,4 +413,24 @@ section.main-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+/* Media Names and Directory */
+
+.directory {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.directory-secondary-title {
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.col {
+  flex: 1;
+}
+
+.directory-img > img {
+  width:100%;
+  height: auto;
 }
