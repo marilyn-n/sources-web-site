@@ -26,6 +26,10 @@ body {
   justify-content: space-between;
 }
 
+.social-link {
+  font-weight: 500;
+}
+
 .nav > ul {
   margin: 0;
   padding: 0;
@@ -45,6 +49,8 @@ li.language {
 
 .nav > ul > li > a {
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -54,7 +60,8 @@ li.language {
 }
 
 .fab, .fas {
-  font-size: 2rem;
+  margin-right: .5rem;
+  font-size: 1.75rem;
 }
 
 /* Navbar Menu */
@@ -123,15 +130,11 @@ li.language {
 /* Search Sources */
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  margin: 2rem 0;
-}
-
-.search-sources-title > p {
-  font-size: 1.25rem;
-  margin: 0;
+  margin: .5rem 0;
+  text-shadow: 2px 3px 0px #000000;
 }
 
 section.search-sources {
@@ -139,6 +142,13 @@ section.search-sources {
   flex-direction: column;
   align-items: center;
   padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.82);
+  color: white;
+}
+
+.search-sources-title > p {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .search-sources-title {
@@ -146,16 +156,16 @@ section.search-sources {
 }
 
 .search-form {
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0;
 }
 
 .search-form > form > input[type="text"] {
   width: 580px;
   height: 2.375rem;
-  padding: 1rem;
-  border-radius: .1875rem;
+  padding: .75rem;
+  border-radius: 30px;
   border: 1px solid #eaedf2;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   margin-right: 1rem;
   outline: none;
@@ -184,10 +194,6 @@ section.search-sources {
 
 .search-btn:focus {
   box-shadow: 0 0 1px 3px #e30404;
-}
-
-.search-options {
-  margin-top: 1rem;
 }
 
 .search-options > span {
@@ -237,7 +243,7 @@ section.main-wrapper {
 
 .card.page {
   flex: 0 1 calc(33.3333% - 20px);
-  margin: 1rem 1rem 0 0;
+  margin: 0 1rem 1rem 0;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(204, 204, 204, 0.18);
@@ -262,7 +268,7 @@ section.main-wrapper {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bolder;
   margin-bottom: .5rem;
 }
@@ -374,6 +380,10 @@ section.main-wrapper {
 }
 
 /* Get Sources Working for you */
+.sources-for-you {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
 .sources-for-you, .indispensable-directory {
   padding: 2rem 4rem;
 }
@@ -433,4 +443,32 @@ h4, .subtitle {
 .directory-img > img {
   width:100%;
   height: auto;
+}
+
+footer {
+  background-color:#b40000;
+  color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 1rem;
+}
+
+footer > .footer-wrapper > div {
+  flex: 1;
+}
+
+.footer-links > li > a {
+  color: white;
+}
+
+.copyright {
+  background-color: #333;
+  padding: 1rem;
+}
+
+.copyright > span {
+  text-align: center;
+  display: block;
 }
