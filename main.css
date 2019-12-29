@@ -68,8 +68,17 @@ li.language {
 /* Navbar Menu */
 
 .navbar {
+  width:100%;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.61);
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar a {
@@ -97,9 +106,9 @@ li.language {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+/* .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: black;
-}
+} */
 
 .dropdown-content {
   display: none;
@@ -126,6 +135,7 @@ li.language {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  position: fixed;
 }
 
 /* Search Sources */
@@ -135,15 +145,16 @@ h1 {
   font-weight: 700;
   line-height: 1;
   margin: 0 0 .5rem 0;
-  text-shadow: 2px 3px 0px #000000;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 section.search-sources {
+  background-image: url('https://picsum.photos/1239/500');
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
-  background-color: rgba(0, 0, 0, 0.82);
+  padding: 0 0 2rem 0;
   color: white;
 }
 
@@ -170,6 +181,7 @@ section.search-sources {
   font-weight: 400;
   margin-right: 1rem;
   outline: none;
+  box-shadow: 0 0 .8rem 0 rgba(0,0,0,.2);
 }
 
 .search-icon {
@@ -212,19 +224,20 @@ section.search-sources {
 }
 
 .option-btn {
-  background-color:#b40000;
+  background-color: rgba(51, 51, 51, 0.61);
   font-size: .875rem;
-  font-weight: 500;
+  font-weight: lighter;
   color: white;
-  border-radius: 100px;
+  border-radius: 3px;
   padding: .5rem .75rem;
   margin: .25rem;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0 0 .8rem 0 rgba(0,0,0,.1);
 }
 
 .option-btn:hover {
-  background-color: #9b0303;
+  background-color: black;
 }
 
 /* Page items */
@@ -260,6 +273,11 @@ section.main-wrapper {
   text-decoration: none;
   color: black;
   box-shadow: 0 0 .8rem 0 rgba(0,0,0,.1);
+  transition: 0.3s;
+}
+
+.card.page:hover {
+  box-shadow: 0 0 .8rem 0 rgba(0,0,0,.2);
 }
 
 .card.page > .card-header > img {
@@ -268,16 +286,17 @@ section.main-wrapper {
 }
 
 .card.page > .card-body {
-  text-align: center;
   padding: .5rem;
 }
 
 .text > .title, .paragraph {
   display: block;
+  color: #1c1c1c;
+  font-size: .875rem;
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: bolder;
   margin-bottom: .5rem;
 }
@@ -361,6 +380,9 @@ section.main-wrapper {
 }
 
 .card-media-header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   flex: 1;
   margin-right: .5rem;
 }
@@ -372,7 +394,7 @@ section.main-wrapper {
 }
 
 .card-media-body {
-  flex: 2;
+  flex: 3;
 }
 
 .card-media-body > p {
@@ -389,6 +411,7 @@ section.main-wrapper {
 
 .card-media-date {
   margin-left: auto;
+  color: gray;
 }
 
 .calendar-event-date > span {
