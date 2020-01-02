@@ -14,9 +14,11 @@ body {
 }
 
 * h4 {
+  font-family: serif;
   color: #1c1c1c;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin: .25rem 0;
 }
 
 .container {
@@ -31,11 +33,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 1rem;
+  padding: .75rem;
 }
 
 .top-navigation > .date {
   font-size: .875rem;
+  align-self: center;
 }
 
 /* Social Links */
@@ -69,7 +72,6 @@ body {
 }
 
 .fab, .fas {
-  display: block;
   margin-right: .5rem;
   font-size: 1.5rem;
   color: white;
@@ -81,7 +83,7 @@ body {
   width:100%;
   overflow: hidden;
   background-color: #b40000;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   box-shadow: 0 7px 27px -5px rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
@@ -129,10 +131,6 @@ body {
   cursor: pointer;
 }
 
-/* .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: black;
-} */
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -173,14 +171,29 @@ h1 {
 }
 
 section.search-sources {
-  background-image: url('https://picsum.photos/1239/500');
-  background-repeat: no-repeat;
-  background-color:#333333;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 0 2rem 0;
   color: white;
+}
+
+.search-sources-bg {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+
+.search-sources-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-sources-title > p {
@@ -213,7 +226,7 @@ section.search-sources {
   position: relative;
   left: 3rem;
   z-index: 11;
-  color: black;
+  color: #535557;
   font-size: 1.25rem;
 }
 
@@ -259,10 +272,6 @@ section.search-sources {
   text-align: center;
   cursor: pointer;
   box-shadow: 0 0 .8rem 0 rgba(0,0,0,.1);
-}
-
-.option-btn:hover {
-  background-color: black;
 }
 
 /* Page items */
@@ -351,6 +360,7 @@ section.main-wrapper {
 }
 
 .btn.sm {
+  display: flex;
   border: 1px solid #007bff;
   color: white;
   background-color: #007bff;
@@ -363,6 +373,10 @@ section.main-wrapper {
   font-weight: 400;
   font-size: .875rem;
   margin: .25rem 0;
+}
+
+.btn.sm > i {
+  align-self: center;
 }
 
 .btn-outline {
@@ -380,6 +394,7 @@ section.main-wrapper {
 }
 
 .btn-outline.lg {
+  background-color: transparent;
   padding: 1rem 3rem;
   margin: 1rem 0;
 }
@@ -403,7 +418,7 @@ section.main-wrapper {
 
 .card-media {
   display: flex;
-  padding: .35rem .75rem;
+  padding: .5rem;
   font-size: .875rem;
   border-bottom: 1px solid rgba(204, 204, 204, 0.49);
   color: black;
@@ -442,6 +457,10 @@ section.main-wrapper {
 .card-media-date {
   margin-left: auto;
   color: gray;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  padding:.25rem;
 }
 
 .calendar-event-date > span {
@@ -463,8 +482,7 @@ section.main-wrapper {
 /* Get Sources Working for you */
 
 .sources-for-you {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: aliceblue;
 }
 
 .benefits-list > li {
@@ -482,9 +500,6 @@ section.main-wrapper {
 
 .subtitle {
   font-size: 1.5rem;
-}
-
-h4, .subtitle {
   text-align: center;
   display: block;
   margin: .25rem 0;
@@ -528,8 +543,9 @@ h4, .subtitle {
 }
 
 .directory-secondary-title {
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 2rem;
+  color: #b40000;
 }
 
 .col {
