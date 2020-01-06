@@ -314,6 +314,7 @@ section.main-wrapper {
 .featured-pages {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card.page {
@@ -373,7 +374,7 @@ section.main-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   border-bottom: 1px solid rgba(204, 204, 204, 0.49);
   background-color: rgba(128, 128, 128, 0.18);
 }
@@ -452,7 +453,7 @@ section.main-wrapper {
 }
 
 .card-media-header > img{
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   object-fit: cover;
 }
@@ -475,7 +476,7 @@ section.main-wrapper {
 
 .card-media-date {
   margin-left: auto;
-  color: gray;
+  text-align: center;
   background-color: green;
   color: white;
   border-radius: 3px;
@@ -650,7 +651,18 @@ b.list-header {
 /* Queries */
 
 /* Phone */
-@media screen and (max-width: 320px) { }
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .navbar a, .dropdown .dropbtn { 
+    font-size: .65rem;
+    padding: .75rem;
+  }
+
+  section.main-wrapper, .container, .sources-for-you, .indispensable-directory {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
+}
 
 /* Tablet */
 
@@ -685,6 +697,34 @@ b.list-header {
   .search-icon {
     font-size: 1rem;
     left: 2.5rem;
+  }
+
+  /* featured pages */
+
+  section.main-wrapper, .container {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
+
+  /* Media Releases and Calendar  Events */
+  .column-2.media {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .panel {
+    margin-right: 1rem;
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Get sources working for you */
+
+  .benefits-list > li {
+    font-size: .85rem;
   }
  
 }
