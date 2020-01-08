@@ -12,86 +12,94 @@
 
   <header>
     <div class="top-navigation">
-      <span class="date">
-        Wednesday, January 1, 2020
-      </span>
-      <ul class="social-links">
-        <li class="social-link">
-          <a href="#"><i class="fab fa-twitter-square"></i></a> 
-        </li>
-        <li class="social-link">
-          <a href="#"><i class="fab fa-facebook-square"></i></a>  
-        </li>
-        <li class="social-link">
-          <a href="#"><i class="fas fa-rss-square"></i></a> 
-        </li>
-        <li class="social-link">
-          <a class="item" href="#">Shop</a>
-        </li>
-        <li class="social-link">
-          <a class="item" href="#">Contact</a>
-        </li>
-        <li class="social-link">
-          <a class="item" href="#">🇫🇷Français</a>
-        </li>
-      </ul>
+      <div class="date">
+        <span></span>
+      </div>
+      <div class="social-links">
+        <ul>
+          <li class="social-link">
+            <a href="#"><i class="fab fa-twitter"></i></a> 
+          </li>
+          <li class="social-link">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>  
+          </li>
+          <li class="social-link">
+            <a href="#"><i class="fas fa-rss"></i></a> 
+          </li>
+          <li class="social-link">
+            <a class="item" href="#">Shop</a>
+          </li>
+          <li class="social-link">
+            <a class="item" href="#">Contact</a>
+          </li>
+          <li class="social-link">
+            <a class="item" href="#">
+              <img class="language" src="./images/flag-of-france.png" alt="" srcset="">
+              Français
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <!-- Navbar menu -->
   <div class="navbar">
-    <a class="logo" href="#home">
-      <img src="./images/sources-logo.png" alt="logo">
-    </a>
-    <a class="navlink" href="#home">Home</a>
-    <div class="dropdown navlink">
-      <button class="dropbtn">News Releases
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">View News Releases</a>
-        <a href="#">Releases Subject Index</a>
-      </div>
+    <div class="logo-wrapper">
+      <a class="logo" href="#">
+        <img src="./images/sources-logo.png" alt="logo">
+      </a>
     </div>
-    <a class="navlink" href="#">Calendar</a> 
-    <div class="dropdown navlink">
-      <button class="dropbtn">Getting Publicity
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Be an affiliate</a>
-        <a href="#">FAQ</a>
+    <div class="navbar-links-wrapper">
+      <a class="" href="#home">Home</a>
+      <div class="dropdown ">
+        <button class="dropbtn">News Releases
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">View News Releases</a>
+          <a href="#">Releases Subject Index</a>
+        </div>
       </div>
+      <a class="" href="#">Calendar</a> 
+      <div class="dropdown ">
+        <button class="dropbtn">Getting Publicity
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Be an affiliate</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="dropdown ">
+        <button class="dropbtn">Journalists & News Media
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Media Names & Numbers</a>
+          <a href="#">Universities & Colleges</a>
+          <a href="#">Speakers</a>
+          <a href="#">Authors</a>
+          <a href="#">Complete Topic Index</a>
+          <a href="#">Topics by Category</a>
+          <a href="#">Download PDFs</a>
+          <a href="#">Fame & Fortune</a>
+        </div>
+      </div>
+      <div class="dropdown ">
+        <button class="dropbtn">Media Relations & Publicity
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Include yourself in Sources</a>
+          <a href="#">Membership form</a>
+          <a href="#">Affiliate program</a>
+          <a href="#">Sources Newsstand</a>
+          <a href="#">Services Overview</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div> 
     </div>
-    <div class="dropdown navlink">
-      <button class="dropbtn">Journalists & News Media
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Media Names & Numbers</a>
-        <a href="#">Universities & Colleges</a>
-        <a href="#">Speakers</a>
-        <a href="#">Authors</a>
-        <a href="#">Complete Topic Index</a>
-        <a href="#">Topics by Category</a>
-        <a href="#">Download PDFs</a>
-        <a href="#">Fame & Fortune</a>
-      </div>
-    </div>
-    <div class="dropdown navlink">
-      <button class="dropbtn">Media Relations & Publicity
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Include yourself in Sources</a>
-        <a href="#">Membership form</a>
-        <a href="#">Affiliate program</a>
-        <a href="#">Sources Newsstand</a>
-        <a href="#">Services Overview</a>
-        <a href="#">FAQ</a>
-
-      </div>
-    </div> 
   </div>
 
   <!-- Search Sources -->
@@ -620,7 +628,7 @@
       </div>
 
       <div class="footer-about-sources">
-        <ul class="footer-links logo-wrapper">
+        <ul class="footer-links">
           <li class="footer-logo">
               <img src="./images/sources-bg-gray.png" alt="" srcset="">
           </li>
@@ -663,6 +671,12 @@
     } 
 
     window.addEventListener('scroll', stickyNavbar);
+
+    window.addEventListener('load', () => {
+      const date = document.querySelector('.date').children[0];
+      const dateAndTime = (new Date()).toString().slice(0, 15);
+      date.textContent = dateAndTime;
+});
 
     
 
