@@ -228,7 +228,7 @@ section.search-sources {
 
 .search-sources-bg {
   width: 100%;
-  height: 12.5rem;
+  height: 13.5rem;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -694,6 +694,12 @@ b.list-header {
 
 /* Media Queries Screen Devices */
 
+@media only screen and (max-width: 445px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
 /* Phone */
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -753,6 +759,20 @@ b.list-header {
 
   .indispensable-directory {
     padding: 0 4rem;
+  }
+
+  .directory {
+    flex-direction: column;
+  }
+
+  .directory-img > img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .directory-description {
+    text-align: center;
+    align-items: center;
   }
 
 }
