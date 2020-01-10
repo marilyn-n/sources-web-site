@@ -349,7 +349,6 @@ section.search-sources {
 .featured-pages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .card.page {
@@ -414,6 +413,11 @@ section.search-sources {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.panel-title {
+  white-space: nowrap;
+  margin-right: .5rem;
+}
+
 .panel-footer {
   padding: 1rem;
   text-align: center;
@@ -424,18 +428,19 @@ section.search-sources {
 
 .btn.sm {
   display: flex;
-  border: 1px solid #007bff;
   color: white;
-  background-color: #007bff;
-  border-radius: .2rem;
   text-align: center;
-  padding: .25rem .5rem;
-  vertical-align: middle;
-  line-height: 1.5;
-  cursor: pointer;
   font-weight: 400;
   font-size: .875rem;
+  line-height: 1.5;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  border-radius: .2rem;
+  padding: .25rem .5rem;
   margin: .25rem 0;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .btn.sm > i {
@@ -529,11 +534,12 @@ section.search-sources {
   font-size: .65rem;
   margin-left: auto;
   text-align: center;
-  background-color: green;
-  color: white;
-  border-radius: 3px;
+  background-color: transparent;
+  color: rgb(87, 86, 86);
+  border-radius: 11px;
   padding:.25rem;
   white-space: nowrap;
+  border: 1px solid rgb(214, 214, 214);
 }
 
 .calendar-event-date > span {
@@ -557,6 +563,8 @@ section.search-sources {
 .benefits-list > li {
   font-size: 1.125rem;
   line-height: 2;
+  display: flex;
+  align-items: center;
 }
 
 .sources-for-you-title{
@@ -585,6 +593,7 @@ section.search-sources {
   font-size: 1.5rem;
   color: #00d164;
   font-weight: 500;
+  margin-right: .5rem;
 }
 
 .find-out-more {
@@ -683,20 +692,11 @@ b.list-header {
   display: block;
 }
 
-/* Queries Screen Devices */
-
-/* Extra Small Phone */
-
-@media only screen and (min-width: 320px) and (max-width: 575px) {
-
-  .search-btn {
-    display: none;
-  }
-}
+/* Media Queries Screen Devices */
 
 /* Phone */
 
-@media only screen and (min-width: 575px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .navbar {
     flex-direction: column;
   }
@@ -722,6 +722,12 @@ b.list-header {
     padding: 1rem 0;
   }
 
+  .search-form > form > input[type="text"] {
+    width: 150px;
+    font-size: 1rem;
+    padding: .45rem .45rem .45rem 2rem;
+  }
+
   .search-btn {
     display: none;
   }
@@ -730,9 +736,25 @@ b.list-header {
     flex-direction: column;
   }
 
+  .column-2.media {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .benefits-for-members {
+    flex-direction: column;
+  }
+
+  .benefits-list > li {
+    font-size: .75rem;
+    margin: 1rem 0;
+  }
+
   .indispensable-directory {
     padding: 0 4rem;
   }
+
 }
 
 /* Tablet */
@@ -768,16 +790,14 @@ b.list-header {
     margin-right: 1rem;
   }
 
-  /* Get sources working for you */
   .indispensable-directory {
     padding: 0 4rem;
   }
 
   .benefits-list > li {
     font-size: .85rem;
+    margin: 1rem 0;
   }
-
-  /* Media Names and Numbers */
 
   .directory-secondary-title {
     font-size: 1.5rem;
