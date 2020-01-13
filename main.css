@@ -1,4 +1,4 @@
-
+/* @import './queries.css'; */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -6,6 +6,7 @@ body {
 
 * a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 * ul {
@@ -419,11 +420,16 @@ section.search-sources {
 }
 
 .panel-footer {
-  padding: 1rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
   font-size: .875rem;
+}
+
+.panel-footer > a {
+  padding: 1rem;
+  display: block;
+  color: gray;
 }
 
 .btn.sm {
@@ -692,17 +698,36 @@ b.list-header {
   display: block;
 }
 
-/* Media Queries Screen Devices */
-
-@media only screen and (max-width: 445px) {
+@media only screen and (max-width: 425px) {
   .container {
     padding: 1rem;
   }
+
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .date {
+    display: none;
+  }
+  
+  /* .navbar-links-wrapper {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    align-self: flex-start;
+    padding: 1rem 0;
+  } */
 }
 
 /* Phone */
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
+  * h4 {
+    font-size: 2rem;
+  }
+
   .navbar {
     flex-direction: column;
   }
@@ -750,6 +775,12 @@ b.list-header {
 
   .benefits-for-members {
     flex-direction: column;
+  }
+
+  .benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .benefits-list > li {
