@@ -44,62 +44,45 @@
   </header>
 
   <!-- Navbar menu -->
+
   <div class="navbar">
-    <div class="logo-wrapper">
-      <a class="logo" href="#">
-        <img src="./images/sources-logo.png" alt="logo">
+    <div class="navbar-controls">
+      <img class="logo" src="./images/sources-logo.png" alt="logo">
+      <a href="javascript:void(0);" class="icon">
+        <i class="fa fa-bars"></i>
       </a>
     </div>
-    <div class="navbar-links-wrapper">
-      <a class="" href="#home">Home</a>
-      <div class="dropdown ">
-        <button class="dropbtn">News Releases
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">View News Releases</a>
-          <a href="#">Releases Subject Index</a>
+    <ul class="navbar-list">
+      <li class="item">
+        <a href="#" class="active">Home</a>
+      </li>
+      <li class="item">
+        <a href="#">Media</a>
+      </li>
+      <li class="item">
+        <a href="#">Publicity</a>
+      </li>
+      <li class="item">
+        <a href="#">About us</a>
+      </li>
+      <li class="item">
+        <a href="#">More</a>
+      </li>
+      <li class="item">
+        <a href="#">Contact</a>
+      </li>
+      <!-- <li class="item">
+        <div class="dropdown">
+          <button class="dropbtn">News
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+          </div>
         </div>
-      </div>
-      <a class="" href="#">Calendar</a> 
-      <div class="dropdown ">
-        <button class="dropbtn">Getting Publicity
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Be an affiliate</a>
-          <a href="#">FAQ</a>
-        </div>
-      </div>
-      <div class="dropdown ">
-        <button class="dropbtn">Journalists & News Media
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Media Names & Numbers</a>
-          <a href="#">Universities & Colleges</a>
-          <a href="#">Speakers</a>
-          <a href="#">Authors</a>
-          <a href="#">Complete Topic Index</a>
-          <a href="#">Topics by Category</a>
-          <a href="#">Download PDFs</a>
-          <a href="#">Fame & Fortune</a>
-        </div>
-      </div>
-      <div class="dropdown ">
-        <button class="dropbtn">Media Relations
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Include yourself in Sources</a>
-          <a href="#">Membership form</a>
-          <a href="#">Affiliate program</a>
-          <a href="#">Sources Newsstand</a>
-          <a href="#">Services Overview</a>
-          <a href="#">FAQ</a>
-        </div>
-      </div> 
-    </div>
+      </li> -->
+    </ul>
   </div>
 
   <!-- Search Sources -->
@@ -685,17 +668,28 @@
         sourcesSection.style.paddingTop = 0;
         navbar.classList.remove('sticky');
       }
-    } 
+    }
+
+    const navbarIcon = document.querySelector('a.icon');
+
+    const responsiveNavbar = () => {
+      const navbar = document.querySelector('.navbar');
+
+      if (navbar.className === 'navbar') {
+        navbar.className += ' responsive';
+      } else {
+        navbar.className = 'navbar';
+      }
+    }
 
     window.addEventListener('scroll', stickyNavbar);
+    navbarIcon.addEventListener('click', responsiveNavbar);
 
     window.addEventListener('load', () => {
       const date = document.querySelector('.date').children[0];
       const dateAndTime = (new Date()).toString().slice(0, 15);
       date.textContent = dateAndTime;
-});
-
-    
+    });
 
   </script>
 
