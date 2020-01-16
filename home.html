@@ -56,38 +56,48 @@
       <li class="item">
         <a href="#" class="active">Home</a>
       </li>
-      <li class="item">
-        <a href="#">Media</a>
-      </li>
+      <li class="item dropdown">
+        <span>Media</span>
+        <i class="fas fa-angle-down"></i>
+        <div class="dropdown-content">
+          <a href="#">Mouse over me</a>
+          <a href="#">Mouse over me</a>
+          <a href="#">Mouse over me</a>
+        </div>
+    </li>
       <li class="item">
         <a href="#">Publicity</a>
       </li>
-      <li class="item">
-        <a href="#">About us</a>
-      </li>
+      <li class="item dropdown">
+        <span>About us</span>
+        <i class="fas fa-angle-down"></i>
+        <div class="dropdown-content">
+          <a href="#">Mouse over me</a>
+          <a href="#">Mouse over me</a>
+          <a href="#">Mouse over me</a>
+        </div>
+    </li>
       <li class="item">
         <a href="#">More</a>
       </li>
       <li class="item">
         <a href="#">Contact</a>
       </li>
-      <!-- <li class="item">
-        <div class="dropdown">
-          <button class="dropbtn">News
-            <i class="fa fa-caret-down"></i>
-          </button>
+      <li class="item dropdown">
+          <span>Dropdown</span>
+          <i class="fas fa-angle-down"></i>
           <div class="dropdown-content">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
+            <a href="#">Mouse over me</a>
+            <a href="#">Mouse over me</a>
+            <a href="#">Mouse over me</a>
           </div>
-        </div>
-      </li> -->
+      </li>
     </ul>
   </div>
 
   <!-- Search Sources -->
   <section class="search-sources">
-    <img class="search-sources-bg" src="https://www.aut.ac.nz/__data/assets/image/0006/92328/placeholder-image10.jpg"/>
+    <img class="search-sources-bg" src="https://bit.ly/2QY9pKn"/>
     <div class="search-sources-content">
       <div class="search-sources-title">
         <h1>Search Sources</h1>
@@ -98,7 +108,7 @@
     <div class="search-form">
       <form action="">
         <i class="fas fa-search search-icon"></i>
-        <input class="search" type="text" placeholder="Search organizations, new releases, topics..."/>
+        <input class="search" type="text" placeholder="Search organizations, topics..."/>
         <button class="search-btn">Search</button>
       </form>
     </div>
@@ -668,6 +678,7 @@
         sourcesSection.style.paddingTop = 0;
         navbar.classList.remove('sticky');
       }
+
     }
 
     const navbarIcon = document.querySelector('a.icon');
@@ -677,8 +688,13 @@
 
       if (navbar.className === 'navbar') {
         navbar.className += ' responsive';
+        document.body.style.position = 'fixed';
+      } else if( navbar.className === 'navbar sticky' ) {
+        navbar.className += ' responsive';
+        document.body.style.position = 'fixed';
       } else {
         navbar.className = 'navbar';
+        document.body.style.position = 'initial';
       }
     }
 

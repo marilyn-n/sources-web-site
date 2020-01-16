@@ -60,7 +60,7 @@ h1 {
   align-self: center;
 }
 
-/* Social Links */
+/* Social Links in top navigation */
 
 .social-links {
   display: flex;
@@ -113,13 +113,16 @@ h1 {
 
 /* Navbar */
 .navbar {
-  overflow: hidden;
   background-color: #b40000;
   display: flex;
   align-items: center;
 }
 
-.navbar a, .navbar .dropdown {
+.navbar-controls {
+  display: flex;
+}
+
+.navbar a {
   color: #f2f2f2;
   padding: 14px 16px;
   display: flex;
@@ -139,14 +142,16 @@ h1 {
 }
 
 .logo {
-  width: 6rem;
+  width: 5rem;
   height: auto;
   margin-left: 1rem;
   object-fit: contain;
 }
 
 ul.navbar-list {
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   margin: 0;
 }
 
@@ -154,56 +159,44 @@ li.item {
   display: flex;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
+li.item.dropdown {
+  display: inline-block;
 }
 
-.dropdown .dropbtn {
-  font-size: .875rem;  
-  border: none;
-  outline: none;
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
   color: white;
-  padding: 1rem 0;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  min-width: auto;
+  background-color: #f9f9f9;
+  width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content a {
-  font-size: .85rem;
-  float: none;
+.dropdown-content a { 
   color: black;
-  padding: .55rem;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+  justify-content: start;
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(128, 128, 128, 0.18);
+  background-color: #e6e6e6;
+  transition: .3s;
 }
 
-.dropdown:hover .dropdown-content {
+li.dropdown:hover .dropdown-content {
   display: block;
-  position: fixed;
 }
 
 /* Search Sources */
 
 section.search-sources {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -217,6 +210,7 @@ section.search-sources {
   position: relative;
   background-repeat: no-repeat;
   filter: alpha(opacity=80); /* For IE8 and earlier */
+  object-fit: cover;
   z-index: -5;
 }
 
@@ -706,6 +700,10 @@ b.list-header {
     display: none;
   }
 
+  .panel-header {
+    flex-direction: column;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -722,9 +720,13 @@ b.list-header {
 
 @media screen and (max-width: 768px) {
   .navbar.responsive {
-    position: relative;
     flex-direction: column;
     align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    height: -webkit-fill-available;
+    flex: 1;
+    z-index: 10;
   }
 
   .navbar.responsive .icon {
@@ -740,9 +742,6 @@ b.list-header {
 
   .navbar-controls {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
