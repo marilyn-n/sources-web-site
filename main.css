@@ -11,7 +11,8 @@ body {
 
 * ul {
   list-style: none;
-  padding: 0
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -38,6 +39,12 @@ h1 {
 
 .container {
   padding: 2rem;
+}
+
+.divider {
+  width:100%;
+  height: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Black Top Navigation */
@@ -345,6 +352,7 @@ form {
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(230, 230, 230);
+  background: white;
   border-radius: .25rem;
   text-decoration: none;
   color: black;
@@ -390,6 +398,7 @@ form {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   margin: 0 .5rem 1rem;
+  background-color: white;
 }
 
 .panel-header {
@@ -398,7 +407,6 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .panel-title {
@@ -599,45 +607,57 @@ form {
 }
 
 /* Media Names and Directory */
+.indispensable-directory {
+  background-color: rgba(234, 237, 237, 0.3);
+}
 
-.directory {
+.directory-wrapper {
   display: flex;
-  padding: 2rem 0;
+  margin-top: 3rem;
 }
 
-.directory-paragraph {
-  font-size: 1.125rem;
-  line-height: 1.44444444;
-  letter-spacing: normal;
-  margin: 1rem 0 0 0;
-}
-
-.directory-secondary-title {
-  font-weight: 500;
-  font-size: 2rem;
-  color: #b40000;
-}
-
-.col {
-  flex: 1;
+.panel.directory {
+  width: 20rem;
+  padding: 1rem 1rem 0 1rem;
+  flex: 1
 }
 
 .directory-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 2;
 }
 
-.directory-img {
-  display: flex;
-  justify-content: flex-end;
+.directory-description .benefits-list{
+  width: 40rem;
 }
 
-.directory-img > img {
-  width: 60%;
-  height: auto;
-  box-shadow: 0 0 1.5rem rgba(105,105,105,.5);
+.directory-description .benefits-list li {
+  align-items: baseline;
+  margin-bottom: 2rem;
 }
+
+.directory-description .benefits-list li b {
+  color: #b40000;
+}
+
+.directory-description h4 {
+  text-align: left;
+  margin: 0;
+}
+
+.directory-title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.444;
+}
+
+.fa-check {
+  font-size: 1.5rem;
+  color: black;
+  margin-right: .5rem;
+}
+
+/* Footer */
 
 footer {
   background-color:#333;
@@ -647,7 +667,6 @@ footer {
 .footer-logo > img {
   width: 8rem;
 }
-
 
 .footer-wrapper {
   display: flex;
@@ -857,8 +876,4 @@ b.list-header {
     font-size: .85rem;
   }
 
-  .directory-img > img {
-    width: 16rem;
-  }
- 
 }
