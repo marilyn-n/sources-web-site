@@ -153,6 +153,7 @@ h1 {
 
 .navbar-controls {
   display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -645,7 +646,7 @@ form {
 }
 
 .panel.directory {
-  width: 20rem;
+  max-width: 20rem;
   height: fit-content;
   padding: 1rem 1rem 0 1rem;
   flex: 1
@@ -678,19 +679,18 @@ footer {
   color: white;
 }
 
-.footer-logo > img {
-  width: 8rem;
+.footer-item {
+  margin: 1rem .5rem;
 }
 
-.footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.footer-logo > img {
+  width: 8rem;
 }
 
 .footer-menu {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-links > li > a {
@@ -722,7 +722,7 @@ b.list-header {
 }
 
 /* Phone */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
 
   .card.page {
     flex: 1 1 100%;
@@ -790,7 +790,7 @@ b.list-header {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .container {
     padding: 1rem;
   }
@@ -859,10 +859,6 @@ b.list-header {
   .directory-wrapper {
     flex-direction: column-reverse;
     align-items: center;
-  }
-
-  .footer-menu {
-    flex-direction: column;
   }
 
 }
