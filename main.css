@@ -357,7 +357,7 @@ form {
 
 .option-btn > i {
   margin-right: .25rem;
-  color: black;
+  color: #b40000;
 }
 
 /* Sources & Resources */
@@ -409,18 +409,17 @@ form {
 
 .card-header > img {
   width: 100%;
-  height: auto;
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
+  display: flex;
 }
 
 .card-body {
   padding: .5rem;
 }
 
-.text > .paragraph {
-  display: block;
-  color: #1c1c1c;
+.card-body > .paragraph {
+  color: #4e4e4e;
   font-size: .875rem;
   line-height: 1.444;
 }
@@ -429,11 +428,10 @@ form {
   display: block;
   background: #b40000;
   color: white;
-  padding: .25rem;
+  padding: .5rem;
   text-align: center;
-  font-size: .75rem;
+  font-size: .875rem;
   font-weight: bolder;
-  margin-bottom: .5rem;
 }
 
 /* Panel Element */
@@ -507,7 +505,7 @@ form {
 }
 
 .btn-outline.lg {
-  width: 15rem;
+  min-width: 15rem;
   font-size: .875rem;
   background-color: transparent;
   padding: 1rem 2rem;
@@ -551,7 +549,6 @@ form {
 }
 
 .card-media-header > img {
-  /* width: 100%; */
   height: 100%;
   object-fit: cover;
 }
@@ -562,6 +559,7 @@ form {
 
 .card-media-body > p {
   color: #4e4e4e;
+  font-size: .875rem;
   margin: .25rem 0;
   line-height: 1.444;
 }
@@ -620,6 +618,7 @@ form {
 }
 
 .subtitle {
+  color: #4e4e4e;
   font-size: 1.5rem;
   text-align: center;
   display: block;
@@ -668,7 +667,7 @@ form {
 }
 
 .directory-description {
-  width: 40rem;
+  max-width: 40rem;
 }
 
 .directory-description .benefits-list li {
@@ -696,6 +695,7 @@ footer {
 
 .footer-item {
   margin: 1rem .5rem;
+  flex: 1;
 }
 
 .footer-logo > img {
@@ -704,8 +704,7 @@ footer {
 
 .footer-menu {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  
 }
 
 .footer-links > li > a {
