@@ -83,6 +83,7 @@ h1 {
   border: 1px solid #007bfe;
   margin: .5rem;
   padding: .75rem 1rem;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -598,6 +599,9 @@ form {
 }
 
 /* Get Sources Working for you */
+.sources-for-you {
+  background-color: rgba(234, 237, 237, 0.3);
+}
 
 .benefits-list > li {
   font-size: 1.125rem;
@@ -606,7 +610,7 @@ form {
   align-items: center;
 }
 
-.sources-for-you-title{
+.sources-for-you-title {
   font-size: 2rem;
 }
 
@@ -624,6 +628,7 @@ form {
 }
 
 .as-a-member {
+  color: #4e4e4e;
   font-weight: bolder;
   font-size: 1.5rem;
   display: block;
@@ -644,12 +649,9 @@ form {
 }
 
 /* Media Names and Directory */
-/* .indispensable-directory {
-  background-color: rgba(234, 237, 237, 0.3);
-} */
 
 .directory-wrapper {
-  width: 50rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
