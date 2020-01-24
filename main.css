@@ -175,17 +175,13 @@ h1 {
   align-items: center;
 }
 
+.navbar a {
+  color: white;
+}
+
 .navbar-controls {
   display: flex;
   align-items: center;
-}
-
-.navbar a {
-  color: #f2f2f2;
-  padding: .65rem;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
 }
 
 .navbar .icon {
@@ -202,8 +198,8 @@ h1 {
 .logo {
   width: 5rem;
   height: auto;
-  margin-left: 1rem;
   object-fit: contain;
+  padding: 1rem;
 }
 
 ul.navbar-list {
@@ -213,19 +209,20 @@ ul.navbar-list {
   margin: 0;
 }
 
-li.item {
-  display: flex;
-}
-
-li.item.dropdown {
-  display: inline-block;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
-  margin: 1rem .5rem;
   color: white;
+}
+
+.dropdown-option {
+  height: 100%;
+  display:flex;
+  align-items: center;
+}
+
+.dropdown-option .fa-angle-down {
+  margin-left: .5rem;
 }
 
 .dropdown-content {
@@ -233,6 +230,7 @@ li.item.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   width: max-content;
+  padding: .25rem 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
   z-index: 1;
@@ -242,11 +240,17 @@ li.item.dropdown {
   font-size: .875rem;
   color: black;
   justify-content: start;
+  padding: .65rem;
+  display: flex;
 }
 
 .dropdown-content a:hover {
   background-color: #e6e6e6;
   transition: .3s;
+}
+
+li.item {
+  padding: 1rem;
 }
 
 li.dropdown:hover .dropdown-content {
@@ -389,9 +393,6 @@ form {
 
 /* Sources & Resources */
 
-.sources-and-resources {
-  background-color: rgba(234, 237, 237, 0.3);
-}
 .main-wrapper {
   display: flex;
 }
@@ -761,6 +762,7 @@ b.list-header {
     float: right;
     display: block;
     margin-left: auto;
+    padding: 1rem;
   }
 }
 
@@ -773,10 +775,20 @@ b.list-header {
     height: -webkit-fill-available;
     flex: 1;
     z-index: 10;
+    overflow-y: scroll;
+  }
+
+  .navbar.responsive .item.dropdown .dropdown-content {
+    display: contents;
+  }
+  
+  .dropdown-content a:hover {
+    background: none;
   }
 
   .navbar a {
     justify-content: flex-start;
+    color: white;
   }
 
   .navbar.responsive .icon {
