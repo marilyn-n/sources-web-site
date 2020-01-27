@@ -1,3 +1,13 @@
+/* colors */
+:root {
+  --primary-color: #b40000;
+  --secondary-color: #007bfe;
+  --title-color: #1c1c1c;
+  --gray-text: #4e4e4e;
+  --dark-text: #333;
+  /* --clear-gray: ; */
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -30,7 +40,7 @@ h1 {
 
 * h4 {
   font-family: serif;
-  color: #1c1c1c;
+  color: var(--title-color);
   text-align: center;
   font-size: 2.5rem;
   margin: .25rem 0;
@@ -78,9 +88,9 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
-  background-color: #007bfe;
+  background-color: var(--secondary-color);
   border-radius: 3px;
-  border: 1px solid #007bfe;
+  border: 1px solid var(--secondary-color);
   margin: .5rem;
   padding: .75rem 1rem;
   white-space: nowrap;
@@ -171,7 +181,7 @@ h1 {
 
 /* Navbar */
 .navbar {
-  background-color: #b40000;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
 }
@@ -326,17 +336,17 @@ form {
   position: relative;
   left: 2.55rem;
   margin-right: .5rem;
-  color: #535557;
+  color: var(--dark-text);
   font-size: 1rem;
 }
 
 ::placeholder {
-  color: #aaacb1;
+  color: gray;
   opacity: 1;
 }
 
 .search-btn {
-  background-color: #b40000;
+  background-color: var(--primary-color);
   color: white;
   padding: .75rem 1.5rem;
   border-radius: 100px;
@@ -385,7 +395,7 @@ form {
 
 .option-btn > i {
   margin-right: .25rem;
-  color: #b40000;
+  color: var(--primary-color);
 }
 
 /* Sources & Resources */
@@ -398,7 +408,6 @@ form {
   margin-bottom: 2rem;
 }
 
-/* Featured Pages Column 1 */
 .column-1 {
  flex: 2;
 }
@@ -444,14 +453,14 @@ form {
 }
 
 .card-body > .paragraph {
-  color: #4e4e4e;
+  color: var(--gray-text);
   font-size: .875rem;
   line-height: 1.444;
 }
 
 .title {
   display: block;
-  background: #b40000;
+  background: var(--primary-color);
   color: white;
   padding: .5rem;
   text-align: center;
@@ -494,29 +503,6 @@ form {
   color: gray;
 }
 
-.btn.sm {
-  display: flex;
-  color: white;
-  text-align: center;
-  font-weight: 400;
-  font-size: .875rem;
-  line-height: 1.5;
-  border: 1px solid #007bff;
-  background-color: #007bff;
-  border-radius: .2rem;
-  padding: .25rem .5rem;
-  margin: .25rem 0;
-  cursor: pointer;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.btn.sm > i {
-  align-self: center;
-}
-
-/* button icons */
-
 .fa-plus-circle {
   font-size: 1rem;
   margin-right: .25rem;
@@ -550,7 +536,7 @@ form {
 }
 
 .card-media-body > p {
-  color: #4e4e4e;
+  color: var(--gray-text);
   font-size: .875rem;
   margin: .25rem 0;
   line-height: 1.444;
@@ -582,7 +568,7 @@ form {
 
 .calendar-event-date > span {
   display: block;
-  color: #333333;
+  color: var(--dark-text);
 }
 
 .calendar-event-date > span.number {
@@ -613,7 +599,7 @@ form {
 }
 
 .subtitle {
-  color: #4e4e4e;
+  color: var(--gray-text);
   font-size: 1.5rem;
   text-align: center;
   display: block;
@@ -626,7 +612,7 @@ form {
 }
 
 .as-a-member {
-  color: #4e4e4e;
+  color: var(--gray-text);
   font-weight: bolder;
   font-size: 1.5rem;
   display: block;
@@ -664,7 +650,7 @@ form {
 }
 
 .directory-footer {
-  height: 4rem;
+  height: auto;
   background: rgba(0, 123, 253, 0.3);
   display: flex;
   padding: .5rem 1rem;
@@ -673,7 +659,7 @@ form {
 }
 
 .directory-footer span i{
-  color: #3f3e3e;
+  color: var(--dark-text);
 }
 
 .directory-wrapper img {
@@ -691,14 +677,14 @@ form {
 
 .fa-check {
   font-size: 1rem;
-  color: #007bfe;
+  color: var(--secondary-color);
   margin-right: .5rem;
 }
 
 /* Footer */
 
 footer {
-  background-color:#333;
+  background-color:var(--dark-text);
   color: white;
 }
 
@@ -745,9 +731,10 @@ b.list-header {
   display: block;
 }
 
-/* Phone */
-@media only screen and (max-width: 375px) {
+/* *************************** MEDIA QUERIES ************************** */
 
+/* Phone size */
+@media only screen and (max-width: 375px) {
   .card.page {
     flex: 1 1 100%;
     margin: .5rem 0;
@@ -761,12 +748,95 @@ b.list-header {
     margin: 1rem 0;
   }
 
+  .directory-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablet size*/
+@media only screen and (min-width: 610px) and (max-width: 768px) { 
+  .column-2.media { 
+    flex-direction: row;
+    display: flex;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container, .indispensable-directory {
+    padding: 1rem;
+  }
+
+  .chip {
+    font-size: .75rem;
+  }
+
+  * h4 {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .date, .search-btn {
+    display: none;
+  }
+
+  .search-form > form > input[type="text"] { 
+    margin-right: 1.5rem;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .card-media-title, .card-media-date {
+    white-space: unset;
+  }
+
   .panel-header {
     flex-direction: column;
   }
 
+  .benefits-for-members {
+    flex-direction: column;
+    padding: 1rem 0 !important;
+  }
+
+  .as-a-member {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-list {
+    margin: 0;
+  }
+
+  .benefits-list > li {
+    font-size: .875rem;
+    margin: 1rem 0;
+  }
+
+  .find-out-more {
+    flex-direction: row;
+  }
+
+  .directory-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
+/* Small screen size computers  */
 @media screen and (max-width: 991px) {
   .navbar .navbar-list {
     display: none;
@@ -778,9 +848,7 @@ b.list-header {
     margin-left: auto;
     padding: 1rem;
   }
-}
-
-@media screen and (max-width: 991px) {
+  
   .navbar.responsive {
     flex-direction: column;
     align-items: flex-start;
@@ -835,93 +903,4 @@ b.list-header {
     padding: 0 .5rem;
     display: block;
   }
-}
-
-@media only screen and (min-width: 610px) and (max-width: 768px) { 
-  .panel-header {
-    flex-direction: column;
-  }
-
-  .column-2.media { 
-    flex-direction: row;
-    display: flex;
-    margin-top: 1rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .chip {
-    font-size: .75rem;
-  }
-
-  * h4 {
-    font-size: 1.75rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .date {
-    display: none;
-  }
-
-  .search-form > form > input[type="text"] { 
-    margin-right: 1.5rem;
-  }
-
-  .search-btn {
-    display: none;
-  }
-
-  .main-wrapper {
-    flex-direction: column;
-  }
-
-  .card-media-title, .card-media-date {
-    white-space: unset;
-  }
-
-  .benefits-for-members {
-    flex-direction: column;
-    padding: 1rem 0 !important;
-  }
-
-  .as-a-member {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .benefits-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .benefits-list {
-    margin: 0;
-  }
-
-  .benefits-list > li {
-    font-size: .875rem;
-    margin: 1rem 0;
-  }
-
-  .find-out-more {
-    flex-direction: row;
-  }
-
-  .indispensable-directory {
-    padding: 1rem;
-  }
-
-  .directory-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
 }

@@ -9,12 +9,10 @@
   <title>Sources Home</title>
 </head>
 <body>
-
+  <!-- Top black navigation -->
   <header>
     <div class="top-navigation">
-      <div class="date">
-        <span></span>
-      </div>
+      <div class="date"><span></span></div>
       <div class="social-links">
         <ul>
           <li class="social-link">
@@ -24,7 +22,7 @@
             <a href="https://www.facebook.com/SourcesDirectory"><i class="fab fa-facebook-f"></i></a>  
           </li>
           <li class="social-link">
-            <a href="#"><i class="fas fa-rss"></i></a> 
+            <a href="http://gateway.sources.com/SourcesNewsRSS.rss"><i class="fas fa-rss"></i></a> 
           </li>
           <li class="social-link">
             <a class="item" href="http://www.sources-shop.com/">Shop</a>
@@ -34,7 +32,7 @@
           </li>
           <li class="social-link">
             <a class="item" href="https://www.sources.com/HomeFR.htm">
-              <img class="language" src="./images/flag-of-france.png" alt="" srcset="">
+              <img class="language" src="./images/flag-of-france.png" alt="français">
               Français
             </a>
           </li>
@@ -43,12 +41,11 @@
     </div>
   </header>
 
-  <!-- Navbar menu -->
-
+  <!-- Navigation bar -->
   <div class="navbar">
     <div class="navbar-controls">
       <img class="logo" src="./images/sources-logo.png" alt="logo">
-      <a href="javascript:void(0);" class="icon">
+      <a href="#" class="icon">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -166,7 +163,6 @@
         </a>
       </div>
     </div>
- 
   </section>
 
   <!-- Featured Pages  -->
@@ -725,7 +721,6 @@
       </div>
     </div>
   </section>
-
   
   <!-- Indispensable directory -->
   <section class="indispensable-directory container">
@@ -859,53 +854,10 @@
     </div>
 
     <div class="copyright">
-      <span>Copyright &copy; Sources 2020</span>
+      <span>Copyright &copy;Sources 2020</span>
     </div>
   </footer>
 
-  <script>
-    const stickyNavbar = () => {
-      const navbar = document.querySelector('.navbar');
-      const sourcesSection = document.querySelector('.search-sources');
-
-      if (window.scrollY > navbar.offsetTop) {
-        sourcesSection.style.paddingTop = navbar.offsetHeight + 'px';
-        navbar.classList.add('sticky');
-      } else {
-        sourcesSection.style.paddingTop = 0;
-        navbar.classList.remove('sticky');
-      }
-
-    }
-
-    const navbarIcon = document.querySelector('a.icon');
-
-    const responsiveNavbar = () => {
-      const navbar = document.querySelector('.navbar');
-      const dropdownContent = document.querySelector('.dropdown-content');
-
-      if (navbar.className === 'navbar') {
-        navbar.className += ' responsive';
-        document.body.style.position = 'fixed';
-      } else if( navbar.className === 'navbar sticky' ) {
-        navbar.className += ' responsive';
-        document.body.style.position = 'fixed';
-      } else {
-        navbar.className = 'navbar';
-        document.body.style.position = 'initial';
-      }
-    }
-
-    window.addEventListener('scroll', stickyNavbar);
-    navbarIcon.addEventListener('click', responsiveNavbar);
-
-    window.addEventListener('load', () => {
-      const date = document.querySelector('.date').children[0];
-      const dateAndTime = (new Date()).toString().slice(0, 15);
-      date.textContent = dateAndTime;
-    });
-
-  </script>
-
+  <script src="./main.js"></script>
 </body>
 </html>
