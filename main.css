@@ -108,6 +108,16 @@ h1 {
   border-color: #0069d9;
 }
 
+ul.list-items {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.list-items > .item {
+  padding: 1rem 0;
+}
+
 /* Black Top Navigation */
 
 .top-navigation {
