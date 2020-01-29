@@ -1,4 +1,12 @@
 .featured-info {
-  background-color: rgba(0, 123, 253, 0.3);
-  padding: .5rem;
+ 
+}
+
+.featured-info > .paragraph {
+  line-height: 1.666;
+}
+
+.featured-info .paragraph a { 
+  font-weight: bolder;
+  color: var(--title-color);
 }

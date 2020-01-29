@@ -9,6 +9,7 @@
   --title-color: #1c1c1c;
   --gray-text: #4e4e4e;
   --dark-text: #333;
+  --clear-gray: rgba(0, 0, 0, 0.1);
 }
 
 /* General styles for all pages */
@@ -50,19 +51,24 @@ h1 {
   margin: 0;
 }
 
-.container {
+.container-fluid {
   padding: 2rem;
+}
+
+.container {
+  padding: 1.5rem;
+  margin: 0 4rem;
 }
 
 .divider {
   width:100%;
   height: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--clear-gray);
 }
 
 .chip {
   height: 1.75rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--clear-gray);
   border-radius: 1rem;
   font-size: .875rem;
   font-weight: 500;
@@ -112,29 +118,34 @@ h1 {
   border-color: #0069d9;
 }
 
-ul.list-items {
+/* Links List */
+.links-list {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.list-items > .item {
-  display: flex;
+.item-link {
+  display: flex; 
+}
+
+.item-link a {
+  width: 100%;
+  height: 100%;
   padding: 1rem 0;
 }
 
-.list-items > .item span {
-  display: block;
-}
-
-.item-icon {
+.item-link .item-link-icon {
   margin-right: 1rem;
+  color: var(--clear-gray);
 }
 
-.item-label {
+.item-link-label {
   font-size: 1.25rem;
   color: var(--dark-text);
 }
+
+/* 
 
 /* Black Top Navigation */
 .top-navigation {
@@ -177,6 +188,11 @@ ul.list-items {
   transition: 0.2s;
 }
 
+.social-link > a > i {
+  font-size: 1rem;
+  color: white;
+}
+
 .social-link:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 4px;
@@ -200,8 +216,7 @@ ul.list-items {
 
 /* Navbar menu */
 .fab, .fas {
-  font-size: 1rem;
-  color: white;
+  font-size: 1.25rem;
 }
 
 /* Navbar */
