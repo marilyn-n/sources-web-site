@@ -1,12 +1,14 @@
 .featured-info {
- 
+ border-left: 3px solid var(--secondary-color);
+ padding-left: .5rem;
 }
 
 .featured-info > .paragraph {
-  line-height: 1.666;
+  line-height: 2;
+  color: var(--gray-text);
 }
 
 .featured-info .paragraph a { 
   font-weight: bolder;
-  color: var(--title-color);
+  color: var(--secondary-color);
 }

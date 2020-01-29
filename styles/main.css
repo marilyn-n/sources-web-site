@@ -57,7 +57,7 @@ h1 {
 
 .container {
   padding: 1.5rem;
-  margin: 0 4rem;
+  margin: 0 3rem;
 }
 
 .divider {
@@ -137,11 +137,11 @@ h1 {
 
 .item-link .item-link-icon {
   margin-right: 1rem;
-  color: var(--clear-gray);
+  color: var(--dark-text);
 }
 
 .item-link-label {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--dark-text);
 }
 
@@ -485,4 +485,11 @@ b.list-header {
 .copyright > span {
   text-align: center;
   display: block;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
 }
