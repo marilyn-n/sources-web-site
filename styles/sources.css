@@ -75,13 +75,14 @@
   border-radius: .25rem;
   margin: 0 .5rem 1rem;
   background-color: white;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .panel-header {
+  width: 100%;
   padding: .5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -91,10 +92,12 @@
 }
 
 .panel-footer {
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
   font-size: .875rem;
+  align-self: flex-end;
 }
 
 .panel-footer > a {
@@ -240,8 +243,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-shadow: 0 0 .8rem 0 rgba(0,0,0,.2);
   background-color: aliceblue;
-  border: 1px solid aliceblue;
+  /* 
+  border: 1px solid aliceblue; */
 }
 
 .directory-content {
@@ -256,10 +261,18 @@
   padding: .5rem 1rem;
   align-items: center;
   justify-content: flex-end;
+  justify-content: center;
+}
+
+.directory-footer span {
+  display: flex;
+  font-size: .875rem;
+  align-items: center;
 }
 
 .directory-footer span i{
   color: var(--dark-text);
+  margin-right: .25rem;
 }
 
 .directory-wrapper img {
@@ -298,10 +311,14 @@
     margin: 1rem 0;
   }
 
-  .directory-content {
+  .directory-footer, .directory-footer span {
     flex-direction: column;
-    align-items: center;
   }
+
+  .directory-footer span {
+    margin-bottom: .25rem;
+  }
+
 }
 
 /* Tablet size*/
@@ -380,6 +397,11 @@
   }
 
   .directory-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .directory-content {
     flex-direction: column;
     align-items: center;
   }
