@@ -7,9 +7,25 @@
 .featured-info > .paragraph {
   line-height: 2;
   color: var(--gray-text);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .featured-info .paragraph a { 
   font-weight: bolder;
   color: var(--secondary-color);
+}
+
+.select-resources-lists {
+  display: flex;
+}
+
+.select-resources-lists .card.links-list:first-child {
+  margin-right: 1rem;
+}
+
+@media ( max-width:768px ) {
+  .select-resources-lists {
+    flex-direction: column;
+  }
 }
