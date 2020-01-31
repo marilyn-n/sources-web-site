@@ -32,7 +32,9 @@ const dateAndTime = () => {
   span.textContent = (new Date()).toString().slice(0, 15);
 }
 
+
 // Hook functions with events
 window.addEventListener('scroll', stickyNavbar);
 navbarIcon.addEventListener('click', responsiveNavbar);
 window.addEventListener('load', dateAndTime);
+// insertFooter();
