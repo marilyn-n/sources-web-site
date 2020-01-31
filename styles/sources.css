@@ -84,11 +84,16 @@
   padding: .5rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .panel-title {
   white-space: nowrap;
   margin-right: .5rem;
+}
+
+.panel-body {
+  width: 100%;
 }
 
 .panel-footer {
@@ -112,6 +117,14 @@
 }
 
 /* Card Media */
+
+.card {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ebeef6;
+  border-radius: 4px;
+  box-shadow: -1px -1px 9px 3px rgba(235,238,246,0.71);
+}
 
 .card-media {
   display: flex;
@@ -365,6 +378,7 @@
 
   .panel-header {
     flex-direction: column;
+    justify-content: normal;
   }
 
   .benefits-for-members {
