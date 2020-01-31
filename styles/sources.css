@@ -217,6 +217,7 @@
 .subtitle {
   color: var(--gray-text);
   font-size: 1.5rem;
+  line-height: 1.444;
   text-align: center;
   display: block;
   margin: .25rem 0;

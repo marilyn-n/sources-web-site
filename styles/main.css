@@ -667,6 +667,8 @@ b.list-header {
     flex: 1;
     z-index: 10;
     overflow-y: scroll;
+    overflow: scroll;
+      -webkit-overflow-scrolling: touch;
   }
 
   .navbar.responsive .item.dropdown .dropdown-content {
