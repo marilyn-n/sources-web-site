@@ -1,8 +1,11 @@
-/* Home Sources Styles */
+/* Home page Styles */
 @import url("sources-2020.css");
 
+/* ************************************************** */
 /* General Styles for Header, Footer, and UI Elements */
-/* colors */
+/* ************************************************** */
+
+/* ***** colors ****** */
 :root {
   --primary-color: #b40000;
   --secondary-color: #007bfe;
@@ -12,7 +15,6 @@
   --clear-gray: rgba(0, 0, 0, 0.1);
 }
 
-/* General styles for all pages */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -125,58 +127,10 @@ h1 {
   border-color: #0069d9;
 }
 
-/* Links List */
-.links-list {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.item-link {
-  display: flex; 
-}
-
-.item-link:nth-child(odd) { 
-  background-color: rgb(241, 244, 255); 
-  transition: .3s; 
-}
-
-.item-link a {
-  width: 100%;
-  height: 100%;
-  padding: 1rem 1rem 1rem .25rem;
-  display: flex;
-  align-items: center;
-}
-
-.item-link .item-link-icon {
-  margin-right: 1rem;
-  color: var(--secondary-color);
-  width: 15px;
-  height: 15px;
-  background-color: aliceblue;
-  border-radius: 50px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.item-link  .item-link-end-icon {
-  margin-left: auto;
-  color: var(--secondary-color);
-}
-
-.item-link-label {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--dark-text);
-  margin-right: 1rem;
-}
-
-/* 
-
+/* ******************** */
 /* Black Top Navigation */
+/* ******************** */
+
 .top-navigation {
   background-color: black;
   color: white;
@@ -195,7 +149,6 @@ h1 {
   align-self: center;
 }
 
-/* Social Links in top navigation */
 .social-links {
   display: flex;
   flex: 1;
@@ -243,12 +196,14 @@ h1 {
   margin-right: .5rem;
 }
 
-/* Navbar menu */
 .fab, .fas {
   font-size: 1.25rem;
 }
 
-/* Navbar */
+/* *********** */
+/* Navbar menu */
+/* *********** */
+
 .navbar {
   background-color: var(--primary-color);
   display: flex;
@@ -334,7 +289,10 @@ li.dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Search Sources */
+/* ************** */
+/* Big Search bar */
+/* ************** */
+
 section.search-sources {
   display: flex;
   align-items: center;
@@ -359,7 +317,6 @@ section.search-sources {
   z-index: -5;
   display: flex;
 }
-
 
 .search-sources-content {
   position: absolute;
@@ -467,7 +424,9 @@ form {
   color: var(--primary-color);
 }
 
+/* ****** */
 /* Footer */
+/* ****** */
 
 footer {
   background-color:var(--dark-text);
@@ -502,6 +461,10 @@ footer {
   display: flex;
 }
 
+.email-contact, .phone-contact {
+  line-height: 1.888;
+}
+
 b.list-header {
   font-size: 1rem;
   display: block;
@@ -520,7 +483,9 @@ b.list-header {
   display: block;
 }
 
-/* Sources Select Resources */
+/* ***************************************** */
+/* Sources Select Resources (Featured pages) */
+/* ***************************************** */
 
 .featured-info {
   border-left: 3px solid var(--secondary-color);
@@ -546,11 +511,65 @@ b.list-header {
  
  .select-resources-lists .card.links-list:first-child {
    margin-right: 1rem;
- } 
+ }
 
-/* *************************** MEDIA QUERIES ************************** */
+/* ******************** */
+/* Blue List of links */
+/* ******************** */
 
-/* Phone size */
+.links-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.item-link {
+  display: flex; 
+}
+
+.item-link:nth-child(odd) { 
+  background-color: rgb(241, 244, 255); 
+  transition: .3s; 
+}
+
+.item-link a {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem .25rem;
+  display: flex;
+  align-items: center;
+}
+
+.item-link .item-link-icon {
+  margin-right: 1rem;
+  color: var(--secondary-color);
+  width: 15px;
+  height: 15px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-link  .item-link-end-icon {
+  margin-left: auto;
+  color: var(--secondary-color);
+}
+
+.item-link-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-right: 1rem;
+}
+
+/* ******************************************************************* */
+/* *************************** MEDIA QUERIES ************************* */
+/* ******************************************************************* */
+
+/* Phone screen size */
 @media only screen and (max-width: 375px) {
   .card.page {
     flex: 1 1 100%;
@@ -575,7 +594,6 @@ b.list-header {
 
 }
 
-/* Tablet size*/
 @media only screen and (min-width: 610px) and (max-width: 768px) { 
   .column-2.media { 
     flex-direction: row;
@@ -584,6 +602,7 @@ b.list-header {
   }
 }
 
+/* Tablet screen size */
 @media (max-width: 768px) {
   .container {
     margin: 0;
@@ -671,7 +690,7 @@ b.list-header {
 
 }
 
-/* Small screen size computers  */
+/* Medium screen size */
 @media screen and (max-width: 991px) {
   .navbar .navbar-list {
     display: none;
