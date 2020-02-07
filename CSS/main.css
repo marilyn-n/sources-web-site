@@ -1,9 +1,9 @@
-/* Home page Styles */
+/* Sources Home page Styles */
 @import url("sources-2020.css");
 
-/* ************************************************** */
-/* General Styles for Header, Footer, and UI Elements */
-/* ************************************************** */
+/* **************************************************** */
+/* General Styles for Header, Footer, and UI Components */
+/* **************************************************** */
 
 /* ***** colors ****** */
 :root {
@@ -115,6 +115,11 @@ h1 {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.link-button-icon {
+  font-size: 1rem;
+  margin-right: .25rem;
 }
 
 .link-button.sm {
@@ -424,6 +429,135 @@ form {
   color: var(--primary-color);
 }
 
+/* ************* */
+/* Panel Component */
+/* ************* */
+
+.panel {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  margin: 0 .5rem 1rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel-header {
+  width: 100%;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-title {
+  white-space: nowrap;
+  margin-right: .5rem;
+}
+
+.panel-body {
+  width: 100%;
+}
+
+.panel-footer {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .875rem;
+  align-self: flex-end;
+}
+
+.panel-footer > a {
+  padding: 1rem;
+  display: block;
+  color: gray;
+}
+
+/* **** */
+/* Card */
+/* **** */
+
+.card {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ebeef6;
+  border-radius: 4px;
+  box-shadow: -1px -1px 9px 3px rgba(235,238,246,0.71);
+}
+
+.card-media {
+  display: flex;
+  padding: .5rem;
+  font-size: .80rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.49);
+  color: black;
+}
+
+.card-media-header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex: 1;
+  margin-right: .5rem;
+}
+
+.card-media-header > img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-media-body {
+  flex: 3;
+}
+
+.card-media-body > p {
+  color: var(--gray-text);
+  font-size: .875rem;
+  margin: .25rem 0;
+  line-height: 1.444;
+}
+
+.card-media-text {
+  display: flex;
+}
+
+.card-media-title {
+  font-weight: bolder;
+  margin-right: .5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-media-date {
+  font-size: .65rem;
+  margin-left: auto;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(87, 86, 86);
+  border-radius: 11px;
+  padding:.25rem;
+  white-space: nowrap;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.calendar-event-date > span {
+  display: block;
+  color: var(--dark-text);
+}
+
+.calendar-event-date > span.number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.calendar-event-date > span.month {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ****** */
 /* Footer */
 /* ****** */
@@ -465,7 +599,7 @@ footer {
   line-height: 1.888;
 }
 
-b.list-header {
+.footer-item .list-header {
   font-size: 1rem;
   display: block;
   margin-bottom: 1rem;
