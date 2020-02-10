@@ -488,6 +488,7 @@ form {
 
 .card-media {
   display: flex;
+  align-items: center;
   padding: .5rem;
   font-size: .80rem;
   border-bottom: 1px solid rgba(204, 204, 204, 0.49);
@@ -540,6 +541,13 @@ form {
   padding:.25rem;
   white-space: nowrap;
   border: 1px solid rgb(214, 214, 214);
+}
+.calendar-event-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
 }
 
 .calendar-event-date > span {
