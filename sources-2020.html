@@ -890,13 +890,13 @@
       const responsiveNavbar = () => {
         if (navbar.className === 'navbar') {
           navbar.className += ' responsive';
-          document.body.style.position = 'fixed';
+          document.body.style.overflow = 'hidden';
         } else if( navbar.className === 'navbar sticky' ) {
           navbar.className += ' responsive';
-          document.body.style.position = 'fixed';
+          document.body.style.overflow = 'hidden';
         } else {
           navbar.className = 'navbar';
-          document.body.style.position = 'initial';
+          document.body.style.overflow = 'unset';
         }
       }
   

@@ -222,6 +222,7 @@ h1 {
 .navbar-controls {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar .icon, .navbar-list .mobile-icon {
@@ -839,9 +840,7 @@ footer {
   }
 
   .navbar a.icon {
-    float: right;
     display: block;
-    margin-left: auto;
     padding: 1rem;
   }
   
