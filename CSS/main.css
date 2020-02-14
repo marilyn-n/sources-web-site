@@ -255,6 +255,10 @@ ul.navbar-list {
   margin: 0;
 }
 
+ul.navbar-list li.item {
+  display: block;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -865,7 +869,7 @@ footer {
     align-items: flex-start;
     position: absolute;
     width: 100%;
-    height: -webkit-fill-available;
+    height: 100vh;
     flex: 1;
     z-index: 40;
     overflow-y: scroll;
