@@ -337,6 +337,7 @@
       <span>Copyright &copy; Sources 2020 - All rights reserved</span>
     </div>
   </footer>
+  
   <script>
     // selectors
     const navbar = document.querySelector('.navbar');
@@ -344,27 +345,21 @@
     const navbarIcon = document.querySelector('a.icon');
 
     // Functions
-    const stickyNavbar = () => {
-      if (window.scrollY > navbar.offsetTop) {
-        searchSection.style.paddingTop = navbar.offsetHeight + 'px';
-        navbar.classList.add('sticky');
-      } else {
-        searchSection.style.paddingTop = 0;
-        navbar.classList.remove('sticky');
+
+    const stickyMenu = () => {
+      if (screen.width >= 990) {
+        if (window.scrollY > navbar.offsetTop) {
+          searchSection.style.paddingTop = navbar.offsetHeight + 'px';
+          navbar.classList.add('sticky');
+        } else {
+          searchSection.style.paddingTop = 0;
+          navbar.classList.remove('sticky');
+        }
       }
     }
 
-    const responsiveNavbar = () => {
-      if (navbar.className === 'navbar') {
-        navbar.className += ' responsive';
-        document.body.style.overflow = 'hidden';
-      } else if( navbar.className === 'navbar sticky' ) {
-        navbar.className += ' responsive';
-        document.body.style.overflow = 'hidden';
-      } else {
-        navbar.className = 'navbar';
-        document.body.style.overflow = 'unset';
-      }
+    const openMenu = () => {
+      navbar.classList.toggle('responsive');
     }
 
     const dateAndTime = () => {
@@ -372,10 +367,9 @@
       span.textContent = (new Date()).toString().slice(0, 15);
     }
 
-
     // Hook functions with events
-    window.addEventListener('scroll', stickyNavbar);
-    navbarIcon.addEventListener('click', responsiveNavbar);
+    window.addEventListener('scroll', stickyMenu);
+    navbarIcon.addEventListener('click', openMenu);
     window.addEventListener('load', dateAndTime);
   </script>
 </body>

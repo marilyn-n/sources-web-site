@@ -870,14 +870,16 @@
     </div>
   </footer>
 
-    <script>
-      // selectors
-      const navbar = document.querySelector('.navbar');
-      const searchSection = document.querySelector('.search-sources');
-      const navbarIcon = document.querySelector('a.icon');
-  
-      // Functions
-      const stickyNavbar = () => {
+  <script>
+    // selectors
+    const navbar = document.querySelector('.navbar');
+    const searchSection = document.querySelector('.search-sources');
+    const navbarIcon = document.querySelector('a.icon');
+
+    // Functions
+
+    const stickyMenu = () => {
+      if (screen.width >= 990) {
         if (window.scrollY > navbar.offsetTop) {
           searchSection.style.paddingTop = navbar.offsetHeight + 'px';
           navbar.classList.add('sticky');
@@ -886,29 +888,21 @@
           navbar.classList.remove('sticky');
         }
       }
-  
-      const responsiveNavbar = () => {
-        if (navbar.className === 'navbar') {
-          navbar.className += ' responsive';
-          document.body.style.overflowY = 'hidden';
-        } else if( navbar.className === 'navbar sticky' ) {
-          navbar.className += ' responsive';
-          document.body.style.overflowY = 'hidden';
-        } else {
-          navbar.className = 'navbar';
-          document.body.style.overflowY = 'unset';
-        }
-      }
-  
-      const dateAndTime = () => {
-        const span = document.querySelector('.date').children[0];
-        span.textContent = (new Date()).toString().slice(0, 15);
-      }
-  
-      // Hook functions with events
-      window.addEventListener('scroll', stickyNavbar);
-      navbarIcon.addEventListener('click', responsiveNavbar);
-      window.addEventListener('load', dateAndTime);
-    </script>
+    }
+
+    const openMenu = () => {
+      navbar.classList.toggle('responsive');
+    }
+
+    const dateAndTime = () => {
+      const span = document.querySelector('.date').children[0];
+      span.textContent = (new Date()).toString().slice(0, 15);
+    }
+
+    // Hook functions with events
+    window.addEventListener('scroll', stickyMenu);
+    navbarIcon.addEventListener('click', openMenu);
+    window.addEventListener('load', dateAndTime);
+  </script>
 </body>
 </html>
