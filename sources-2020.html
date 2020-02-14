@@ -48,16 +48,16 @@
       <a href="sources-2020.html">
         <img class="logo" src="Graphics/sources-logo.png" alt="logo">
       </a>
-      <a href="#" class="icon">
+      <button class="mobile-btn">
         <i class="fa fa-bars"></i>
-      </a>
+      </button>
     </div>
     <ul class="navbar-list">
       <li class="item">
-        <div class="dropdown-option">
+        <a class="dropdown-option" href="sources-2020.html">
           <i class="fas fa-home mobile-icon"></i>
-          <a href="sources-2020.html">Home</a>
-        </div>
+          Home
+        </a>
       </li>
       <li class="item dropdown">
         <div class="dropdown-option">
@@ -878,7 +878,7 @@
     // selectors
     const navbar = document.querySelector('.navbar');
     const searchSection = document.querySelector('.search-sources');
-    const navbarIcon = document.querySelector('a.icon');
+    const mobileBtn = document.querySelector('.mobile-btn');
     const pageContent = document.querySelector('.page-content');
 
     // Functions
@@ -907,7 +907,7 @@
 
     // Hook functions with events
     window.addEventListener('scroll', stickyMenu);
-    navbarIcon.addEventListener('click', openMenu);
+    mobileBtn.addEventListener('click', openMenu);
     window.addEventListener('load', dateAndTime);
   </script>
 </body>

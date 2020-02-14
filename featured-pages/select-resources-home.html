@@ -47,37 +47,36 @@
   <!-- Navigation bar -->
   <div class="navbar">
     <div class="navbar-controls">
-      <a href="/sources-2020.html">
+      <a href="../sources-2020.html">
         <img class="logo" src="Graphics/sources-logo.png" alt="logo">
       </a>
-      <a href="#" class="icon">
+      <button class="mobile-btn">
         <i class="fa fa-bars"></i>
-      </a>
+      </button>
     </div>
     <ul class="navbar-list">
       <li class="item">
-        <div class="dropdown-option">
+        <a class="dropdown-option" href="../sources-2020.html">
           <i class="fas fa-home mobile-icon"></i>
-          <a href="/sources-2020.html">Home</a>
-        </div>
+          Home
+        </a>
       </li>
       <li class="item">
-        <div class="dropdown-option">
+        <a class="dropdown-option" href="https://www.sources.com/SSR/SSRTitleIndex.htm">
           <i class="fas fa-bookmark mobile-icon"></i>
-          <a href="https://www.sources.com/SSR/SSRTitleIndex.htm">Titles</a>
-        </div>
+          Titles
+        </a>
       </li>
       <li class="item">
-        <div class="dropdown-option">
-          <i class="fas fa-users mobile-icon"></i>
-          <a href="https://www.sources.com/SSR/SSRAuthorIndex.htm">Authors</a>
-        </div>
+        <a class="dropdown-option" href="https://www.sources.com/SSR/SSRAuthorIndex.htm">
+          <i class="fas fa-users mobile-icon"></i>Authors
+        </a>
       </li>
       <li class="item">
-        <div class="dropdown-option">
+        <a class="dropdown-option" href="https://www.sources.com/Listings/Li_Su_Index.htm">
           <i class="fas fa-folder mobile-icon"></i>
-          <a href="https://www.sources.com/Listings/Li_Su_Index.htm">Subject Index</a>
-        </div>
+          Subject Index
+        </a>
       </li>
       <li class="item dropdown">
         <div class="dropdown-option">
@@ -345,7 +344,7 @@
     // selectors
     const navbar = document.querySelector('.navbar');
     const searchSection = document.querySelector('.search-sources');
-    const navbarIcon = document.querySelector('a.icon');
+    const mobileBtn = document.querySelector('.mobile-btn');
     const pageContent = document.querySelector('.page-content');
 
     // Functions
@@ -374,7 +373,7 @@
 
     // Hook functions with events
     window.addEventListener('scroll', stickyMenu);
-    navbarIcon.addEventListener('click', openMenu);
+    mobileBtn.addEventListener('click', openMenu);
     window.addEventListener('load', dateAndTime);
   </script>
 </body>
