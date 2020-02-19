@@ -746,6 +746,7 @@ footer {
 
   .directory-footer, .directory-footer span {
     flex-direction: column;
+    text-align: center;
   }
 
   .directory-footer span {
