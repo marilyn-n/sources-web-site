@@ -725,6 +725,34 @@ footer {
   margin-right: 1rem;
 }
 
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.bold-wrapper {
+  width: 3rem;
+  height: 3rem;
+  background: #f2f3f5;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 4;
+}
+
+.bold-wrapper i {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.empty-state-label, .empty-state-message {
+  color: gray;
+  font-size: .875rem;
+  margin-bottom: .45rem;
+}
 /* ******************************************************************* */
 /* *************************** MEDIA QUERIES ************************* */
 /* ******************************************************************* */
