@@ -601,6 +601,10 @@ footer {
   flex-direction: column;
 }
 
+.footer-item:first-child {
+  align-self: end;
+}
+
 .footer-logo > img {
   width: 8rem;
 }
@@ -608,7 +612,7 @@ footer {
 .footer-menu {
   display: flex;
   flex-wrap: wrap;
-  
+  align-items: baseline;
 }
 
 .footer-links > li > a {
