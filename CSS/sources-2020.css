@@ -25,6 +25,8 @@
 .featured-pages {
   display: flex;
   flex-wrap: wrap;
+  border-right: 1px solid rgba(128, 128, 128, 0.4);
+  margin-right: .5rem;
 }
 
 .card.page {
