@@ -622,6 +622,10 @@ footer {
   white-space: nowrap;
 }
 
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
 .footer-social-links {
   display: flex;
 }
